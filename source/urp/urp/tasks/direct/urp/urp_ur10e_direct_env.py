@@ -11,6 +11,8 @@ from isaaclab.sim.spawners.from_files import GroundPlaneCfg, spawn_ground_plane
 from .urp_ur10e_direct_env_cfg import UrpUR10eDirectEnvCfg
 
 # push test (09.08 14:41)
+# push test (09.08 15:26)
+
 
 class UrpUR10eDirectEnv(DirectRLEnv):
     """Direct RL env for UR10e + spindle.
@@ -101,6 +103,8 @@ class UrpUR10eDirectEnv(DirectRLEnv):
         rew = -1.0 * torch.sum(err_q * err_q, dim=-1) \
               -0.001 * torch.sum(self.dq[:, self._jid] * self.dq[:, self._jid], dim=-1)
         return rew
+    
+    
 
     # ---------------- Dones ----------------
     def _get_dones(self) -> tuple[torch.Tensor, torch.Tensor]:
