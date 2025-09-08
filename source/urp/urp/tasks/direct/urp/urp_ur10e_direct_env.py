@@ -10,6 +10,7 @@ from isaaclab.sim.spawners.from_files import GroundPlaneCfg, spawn_ground_plane
 
 from .urp_ur10e_direct_env_cfg import UrpUR10eDirectEnvCfg
 
+# push test (09.08 14:41)
 
 class UrpUR10eDirectEnv(DirectRLEnv):
     """Direct RL env for UR10e + spindle.
